@@ -9,130 +9,94 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
         }
 
-        /* HEADER */
-        .header {
-            height: 420px;
-            position: relative;
-            background:
-                linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6)),
-                url('khiva.png');
-            background-size: cover;
-            background-position: center;
-        }
-
-        /* MENU */
-        .menu {
-            position: absolute;
-            bottom: -35px;
-            left: 50%;
-            transform: translateX(-50%);
+        /* Yangi fon rasmi */
+        .hero {
+            background: url("newfon.png") no-repeat center center/cover;
+            height: 90vh;
             display: flex;
-            gap: 15px;
-            background: rgba(255,255,255,0.35);
-            padding: 15px 25px;
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
-        }
-
-        .menu a {
-            background-color: #0b63b8;
+            justify-content: center;
+            align-items: center;
             color: white;
-            padding: 12px 20px;
-            border-radius: 10px;
-            text-decoration: none;
-            font-size: 16px;
+            text-shadow: 0 4px 20px black;
+            font-size: 48px;
             font-weight: bold;
-            white-space: nowrap;
+            backdrop-filter: brightness(0.6);
         }
 
-        /* CONTENT */
-        .content {
-            margin-top: 70px;
-            padding: 20px;
-            text-align: center;
-        }
-
-        h1 {
-            color: #003366;
-            font-size: 30px;
-        }
-
-        p {
-            font-size: 18px;
-            color: #333;
-            width: 92%;
-            margin: auto;
-            line-height: 1.7;
-        }
-
-        /* CONTACT */
-        .contact-box {
-            margin-top: 40px;
-        }
-
-        .contact-box p {
+        /* Menyu */
+        nav {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.7);
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 15px 0;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            backdrop-filter: blur(10px);
             font-size: 20px;
-            margin: 8px 0;
+            font-weight: bold;
+            border-radius: 0 0 20px 20px;
         }
 
-        .contact-box b {
+        nav a {
+            text-decoration: none;
             color: #003366;
         }
 
-        /* MOBILE FIXES */
-        @media (max-width: 600px) {
-            .header {
-                height: 320px;
-            }
-
-            .menu {
-                gap: 10px;
-                padding: 10px 15px;
-            }
-
-            .menu a {
-                padding: 10px 14px;
-                font-size: 14px;
-            }
-
-            h1 {
-                font-size: 26px;
-            }
+        section {
+            padding: 50px 20px;
+            max-width: 900px;
+            margin: auto;
         }
 
+        h2 {
+            text-align: center;
+            color: #003366;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
     </style>
+
 </head>
 <body>
 
-    <!-- HEADER -->
-    <div class="header">
-        <div class="menu">
-            <a href="#about">Biz haqimizda</a>
-            <a href="#products">Mahsulotlar</a>
-            <a href="#contact">Aloqa</a>
-        </div>
+    <!-- Menyu -->
+    <nav>
+        <a href="#biz">Biz haqimizda</a>
+        <a href="#mahsulot">Mahsulotlar</a>
+        <a href="#aloqa">Aloqa</a>
+    </nav>
+
+    <!-- Yangi fon rasmi bilan bosh qism -->
+    <div class="hero">
+        Khiva Textile
     </div>
 
-    <!-- CONTENT -->
-    <div class="content">
-
-        <h1 id="about">Biz haqimizda</h1>
+    <!-- Biz haqimizda -->
+    <section id="biz">
+        <h2>Biz haqimizda</h2>
         <p>
-            Khiva Tekstil – zamonaviy texnologiyalar asosida yuqori sifatli to‘qimachilik mahsulotlari ishlab chiqaruvchi korxona.
-            Bizning maqsadimiz – ichki va tashqi bozorda raqobatbardosh mahsulotlar yaratish.
+            Khiva Textile – zamonaviy texnologiyalar asosida yuqori sifatli to‘qimachilik mahsulotlari ishlab chiqaruvchi korxona.
         </p>
+    </section>
 
-        <div class="contact-box" id="contact">
-            <h1>Aloqa</h1>
-            <p><b>Manzil:</b> Xiva tumani, Shomoxulim mahallasi</p>
-            <p><b>Telefon:</b> +998 91 993 15 15</p>
-            <p><b>Email:</b> info@khivatex.com</p>
-        </div>
+    <!-- Mahsulotlar -->
+    <section id="mahsulot">
+        <h2>Mahsulotlar</h2>
+        <p>Bu bo‘limga mahsulotlar joylashtiriladi.</p>
+    </section>
 
-    </div>
+    <!-- Aloqa -->
+    <section id="aloqa">
+        <h2>Aloqa</h2>
+        <p><strong>Manzil:</strong> Xiva tumani, Shomoxulim mahallasi</p>
+        <p><strong>Aloqa:</strong> +998 91 993 15 15</p>
+        <p><strong>Email:</strong> info@khivatex.com</p>
+    </section>
 
 </body>
 </html>
