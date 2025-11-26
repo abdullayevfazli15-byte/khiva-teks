@@ -9,185 +9,119 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #eef1f5;
+            background-color: #f5f5f5;
         }
 
-        /* HEADER / HERO SECTION */
+        /* HEADER RASM + EFFEKT */
         .header {
-            height: 430px;
-            background:
-                linear-gradient(to bottom, rgba(0,0,0,0.15), rgba(0,0,0,0.55)),
-                url("khiva.png");
+            height: 420px;
+            position: relative;
+            background: 
+                linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6)),
+                url('khiva.png'); /* PNG rasm shu yerda chaqiriladi */
             background-size: cover;
             background-position: center;
-            border-bottom-left-radius: 25px;
-            border-bottom-right-radius: 25px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-            position: relative;
-            display: flex;
-            align-items: flex-end;
-            padding-bottom: 40px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
         }
 
         /* MENU */
         .menu {
             position: absolute;
-            top: 20px;
+            bottom: -35px;
             left: 50%;
             transform: translateX(-50%);
             display: flex;
-            gap: 25px;
-            background: rgba(255,255,255,0.2);
-            padding: 12px 35px;
-            border-radius: 15px;
-            backdrop-filter: blur(12px);
+            gap: 20px;
         }
 
         .menu a {
+            background-color: #0b63b8;
             color: white;
-            font-weight: bold;
+            padding: 14px 28px;
+            border-radius: 14px;
             text-decoration: none;
             font-size: 18px;
-            padding-bottom: 3px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
             transition: 0.2s;
         }
 
         .menu a:hover {
-            border-bottom: 3px solid white;
+            background-color: #094f92;
+            transform: scale(1.05);
         }
 
-        /* HERO TITLE */
-        .hero-title {
-            text-align: center;
-            width: 100%;
-            color: white;
-            font-size: 40px;
-            font-weight: bold;
-            letter-spacing: 1px;
-            text-shadow: 0 3px 6px rgba(0,0,0,0.3);
-        }
-
-        /* MAIN CONTENT */
-        .section {
-            width: 90%;
-            margin: 40px auto;
+        /* CONTENT */
+        .content {
+            margin-top: 70px;
+            padding: 20px;
             text-align: center;
         }
 
-        .section h2 {
-            font-size: 32px;
+        h1 {
             color: #003366;
-            margin-bottom: 10px;
+            font-size: 32px;
         }
 
-        .section p {
-            color: #444;
+        p {
             font-size: 18px;
+            color: #333;
+            width: 90%;
+            margin: auto;
             line-height: 1.7;
         }
 
-        /* PRODUCTS */
-        .products {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 25px;
-            margin-top: 35px;
-        }
-
-        .product-card {
-            background: white;
+        /* ALOQA BO'LIMI */
+        .contact-box {
+            margin-top: 50px;
             padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            transition: 0.3s;
+            text-align: center;
         }
 
-        .product-card:hover {
-            transform: translateY(-5px);
+        .contact-box p {
+            font-size: 20px;
+            color: #222;
+            margin: 10px 0;
         }
 
-        .product-card h3 {
+        .contact-box b {
             color: #003366;
         }
 
-        /* CONTACT */
-        .contact-box {
-            background: white;
-            padding: 25px;
-            border-radius: 20px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-            width: 90%;
-            margin: auto;
-        }
-
-        /* FOOTER */
-        footer {
-            background: #003366;
-            color: white;
-            padding: 15px 0;
-            text-align: center;
-            margin-top: 40px;
-        }
     </style>
 </head>
 <body>
 
     <!-- HEADER -->
-    <div class="header">
-        <div class="menu">
-            <a href="#">Biz haqimizda</a>
-            <a href="#products">Mahsulotlar</a>
-            <a href="#contact">Aloqa</a>
-        </div>
-        <div class="hero-title">Khiva Textile</div>
+    <div class="header"></div>
+
+    <!-- MENU -->
+    <div class="menu">
+        <a href="#">Biz haqimizda</a>
+        <a href="#">Mahsulotlar</a>
+        <a href="#">Aloqa</a>
     </div>
 
-    <!-- ABOUT -->
-    <div class="section">
-        <h2>Biz haqimizda</h2>
+    <!-- CONTENT -->
+    <div class="content">
+        <h1>Biz haqimizda</h1>
         <p>
-            Khiva Textile – zamonaviy texnologiyalar asosida yuqori sifatli to‘qimachilik mahsulotlari
-            ishlab chiqaruvchi zamonaviy korxona. Bizning maqsadimiz – ichki va tashqi bozorda
-            raqobatbardosh mahsulotlar yetkazib berishdir.
+            Khiva Tekstil – zamonaviy texnologiyalar asosida yuqori sifatli to‘qimachilik mahsulotlari ishlab chiqaruvchi korxona.
+            Bizning maqsadimiz – ichki va tashqi bozorda raqobatbardosh mahsulotlar yaratish.
         </p>
-    </div>
 
-    <!-- PRODUCTS -->
-    <div class="section" id="products">
-        <h2>Mahsulotlarimiz</h2>
-
-        <div class="products">
-            <div class="product-card">
-                <h3>Trikotaj mahsulotlari</h3>
-                <p>Sifatli iplar asosida tayyorlangan erkaklar va ayollar kiyimlari.</p>
-            </div>
-
-            <div class="product-card">
-                <h3>Bolalar kiyimi</h3>
-                <p>Yumshoq va xavfsiz materiallardan ishlab chiqarilgan kiyimlar.</p>
-            </div>
-
-            <div class="product-card">
-                <h3>Export mahsulotlari</h3>
-                <p>Yevropa standartlariga mos trikotaj mahsulotlari.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- CONTACT -->
-    <div class="section" id="contact">
-        <h2>Aloqa</h2>
+        <!-- ALOQA BO‘LIMI -->
         <div class="contact-box">
-            <p><b>Manzil:</b> Xiva shahri, ...</p>
-            <p><b>Telefon:</b> +998 90 123 45 67</p>
+            <h1>Aloqa</h1>
+
+            <p><b>Manzil:</b> Xiva tumani, Shomoxulim mahallasi</p>
+            <p><b>Telefon:</b> +998 91 993 15 15</p>
             <p><b>Email:</b> info@khivatex.com</p>
         </div>
-    </div>
 
-    <!-- FOOTER -->
-    <footer>
-        © 2025 Khiva Textile — Barcha huquqlar himoyalangan
-    </footer>
+    </div>
 
 </body>
 </html>
