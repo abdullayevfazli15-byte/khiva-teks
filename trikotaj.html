@@ -6,87 +6,132 @@
   <title>Trikotaj — Khiva Textile</title>
 
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f4f6fa;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    /* Navbar */
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #eef2f7;
+    }
+
+    /* NAVBAR */
     nav {
       position: fixed;
       top: 0;
-      left: 0;
       width: 100%;
-      height: 60px;
+      height: 70px;
       background: #ffffffcc;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      backdrop-filter: blur(12px);
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 35px;
+      gap: 40px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.12);
       z-index: 1000;
     }
+
     nav a {
       text-decoration: none;
-      color: #0b63b8;
-      font-weight: bold;
       font-size: 18px;
+      font-weight: 600;
+      color: #0b63b8;
+      padding: 8px 14px;
+      border-radius: 10px;
+      transition: 0.3s;
     }
 
-    /* Title */
+    nav a:hover {
+      background: rgba(11, 99, 184, 0.12);
+    }
+
+    /* TITLE */
     .title {
-      margin-top: 100px;
+      margin-top: 120px;
       text-align: center;
-      font-size: 32px;
-      color: #003366;
-      font-weight: bold;
+      font-size: 36px;
+      font-weight: 900;
+      background: linear-gradient(45deg, #003366, #0b63b8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: 1px;
     }
 
-    /* Gallery grid */
+    /* MASONRY GRID (Pinterest style) */
     .gallery {
-      max-width: 1100px;
-      margin: 40px auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 25px;
-      padding: 20px;
+      max-width: 1200px;
+      margin: 40px auto 60px;
+      column-count: 3;
+      column-gap: 20px;
+      padding: 0 20px;
     }
 
     .gallery img {
       width: 100%;
-      height: 250px;
-      object-fit: cover;
-      border-radius: 14px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-      transition: 0.3s;
+      margin-bottom: 20px;
+      border-radius: 16px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+      break-inside: avoid;
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+      opacity: 0;
+      animation: fadeIn 0.8s forwards;
     }
 
     .gallery img:hover {
-      transform: scale(1.04);
-      box-shadow: 0 10px 24px rgba(0,0,0,0.18);
+      transform: scale(1.05);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.22);
     }
 
-    /* Back button */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* BACK BUTTON */
     .back-btn {
       display: block;
-      width: 200px;
+      width: 220px;
+      margin: 20px auto 60px;
       text-align: center;
-      margin: 20px auto;
-      padding: 12px 0;
-      background: #0b63b8;
+      padding: 14px 0;
+      background: linear-gradient(45deg, #0b63b8, #084f92);
       color: white;
-      border-radius: 10px;
-      text-decoration: none;
       font-size: 18px;
       font-weight: bold;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+      text-decoration: none;
+      border-radius: 12px;
+      box-shadow: 0 6px 22px rgba(0,0,0,0.18);
       transition: 0.3s;
     }
 
     .back-btn:hover {
-      background: #084f92;
+      transform: translateY(-4px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    }
+
+    /* MOBILE RESPONSIVE */
+    @media (max-width: 900px) {
+      .gallery {
+        column-count: 2;
+      }
+    }
+    @media (max-width: 600px) {
+      .gallery {
+        column-count: 1;
+      }
+      .title {
+        font-size: 28px;
+      }
+      nav {
+        gap: 20px;
+        height: 60px;
+      }
+      nav a {
+        font-size: 14px;
+        padding: 6px 10px;
+      }
     }
 
   </style>
@@ -102,15 +147,13 @@
 
   <div class="title">Trikotaj bo‘limi</div>
 
-  <!-- GALLERY -->
+  <!-- MODERN MASONRY GALLERY -->
   <div class="gallery">
     <img src="triko1.jfif" alt="Trikotaj 1">
     <img src="triko2.jpg" alt="Trikotaj 2">
     <img src="triko3.jpg" alt="Trikotaj 3">
     <img src="triko4.jpg" alt="Trikotaj 4">
     <img src="triko5.jpg" alt="Trikotaj 5">
-    <img src="triko6.jpg" alt="Trikotaj 6">
-    <img src="triko7.jpeg" alt="Trikotaj 7">
     <img src="triko8.jpg" alt="Trikotaj 8">
     <img src="triko9.jpg" alt="Trikotaj 9">
   </div>
