@@ -130,6 +130,20 @@
       font-weight: 700;
     }
 
+    /* ——— MAP STYLE ——— */
+    .map-box {
+      margin-top: 25px;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+
+    iframe {
+      width: 100%;
+      height: 380px;
+      border: 0;
+    }
+
     /* ——— MOBIL ——— */
     @media (max-width: 700px) {
       nav {
@@ -157,6 +171,10 @@
       p {
         font-size: 16px;
       }
+
+      iframe {
+        height: 300px;
+      }
     }
   </style>
 </head>
@@ -172,6 +190,8 @@
 
   <!-- HERO -->
   <header class="hero"></header>
+
+
 
   <!-- ---------------------- BIZ HAQIMIZDA ---------------------- -->
   <section id="biz">
@@ -216,6 +236,8 @@
     </p>
   </section>
 
+
+
   <!-- ---------------------- MAHSULOTLAR ---------------------- -->
   <section id="mahsulot">
     <h2>Mahsulotlar</h2>
@@ -245,12 +267,25 @@
     </div>
   </section>
 
-  <!-- ---------------------- ALOQA ---------------------- -->
+
+
+  <!-- ---------------------- ALOQA + LOKATSIYA ---------------------- -->
   <section id="aloqa">
     <h2>Aloqa</h2>
+
     <p><strong>Manzil:</strong> Xiva tumani, Shomoxulim mahallasi</p>
     <p><strong>Telefon:</strong> +998 91 993 15 15</p>
     <p><strong>Email:</strong> info@khivatex.com</p>
+
+    <!-- MAP BOX -->
+    <div class="map-box">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6024.068284339073!2d60.4324116!3d41.4314988!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41dfbb0019ec66e3%3A0xc9b0f28612ce5822!2sKHIVA%20TEKS!5e0!3m2!1sru!2s!4v1700000000000"
+        loading="lazy"
+        allowfullscreen>
+      </iframe>
+    </div>
+
   </section>
 
 </body>
