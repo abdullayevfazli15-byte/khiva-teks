@@ -6,11 +6,7 @@
   <title>Trikotaj — Khiva Textile</title>
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
       font-family: 'Segoe UI', Arial, sans-serif;
@@ -42,10 +38,7 @@
       border-radius: 10px;
       transition: 0.3s;
     }
-
-    nav a:hover {
-      background: rgba(11, 99, 184, 0.12);
-    }
+    nav a:hover { background: rgba(11,99,184,0.12); }
 
     /* TITLE */
     .title {
@@ -59,34 +52,28 @@
       letter-spacing: 1px;
     }
 
-    /* MASONRY GRID (Pinterest style) */
+    /* PERFECT GRID */
     .gallery {
       max-width: 1200px;
-      margin: 40px auto 60px;
-      column-count: 3;
-      column-gap: 20px;
+      margin: 50px auto 70px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
       padding: 0 20px;
     }
 
     .gallery img {
       width: 100%;
-      margin-bottom: 20px;
+      height: 260px;      /* ← hamma rasm bir xil bo‘ladi */
+      object-fit: cover;
       border-radius: 16px;
       box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-      break-inside: avoid;
-      transition: transform 0.35s ease, box-shadow 0.35s ease;
-      opacity: 0;
-      animation: fadeIn 0.8s forwards;
+      transition: 0.35s ease;
     }
 
     .gallery img:hover {
-      transform: scale(1.05);
+      transform: scale(1.04);
       box-shadow: 0 12px 28px rgba(0,0,0,0.22);
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to   { opacity: 1; transform: translateY(0); }
     }
 
     /* BACK BUTTON */
@@ -111,31 +98,16 @@
       box-shadow: 0 10px 30px rgba(0,0,0,0.25);
     }
 
-    /* MOBILE RESPONSIVE */
-    @media (max-width: 900px) {
-      .gallery {
-        column-count: 2;
-      }
-    }
+    /* MOBILE */
     @media (max-width: 600px) {
-      .gallery {
-        column-count: 1;
-      }
-      .title {
-        font-size: 28px;
-      }
-      nav {
-        gap: 20px;
-        height: 60px;
-      }
-      nav a {
-        font-size: 14px;
-        padding: 6px 10px;
-      }
+      nav { height: 60px; gap: 20px; }
+      nav a { font-size: 14px; padding: 6px 10px; }
+      .title { font-size: 28px; }
+      .gallery img { height: 220px; }
     }
-
   </style>
 </head>
+
 <body>
 
   <!-- NAVBAR -->
@@ -147,7 +119,7 @@
 
   <div class="title">Trikotaj bo‘limi</div>
 
-  <!-- MODERN MASONRY GALLERY -->
+  <!-- GRID GALLERY -->
   <div class="gallery">
     <img src="triko1.jfif" alt="Trikotaj 1">
     <img src="triko2.jpg" alt="Trikotaj 2">
