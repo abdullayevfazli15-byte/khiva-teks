@@ -26,9 +26,9 @@
       align-items: center;
       justify-content: center;
       gap: 35px;
-      background: rgba(255,255,255,0.85);
+      background: rgba(255,255,255,0.88);
       backdrop-filter: blur(10px);
-      box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.10);
       z-index: 10000;
     }
 
@@ -59,14 +59,11 @@
       position: absolute;
       top: 0; left: 0;
       width: 100%; height: 100%;
-      background: linear-gradient(
-        rgba(0,0,0,0.20),
-        rgba(0,0,0,0.45)
-      );
+      background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.55));
       z-index: 1;
     }
 
-    /* ——— BO‘LIM ——— */
+    /* ——— SECTION BOX ——— */
     section {
       max-width: 1000px;
       margin: 40px auto;
@@ -76,6 +73,15 @@
       box-shadow: 0 10px 28px rgba(0,0,0,0.10);
       position: relative;
       z-index: 10;
+    }
+
+    /* ——— AJRATGICH (DIVIDER) ——— */
+    .divider {
+      width: 90%;
+      height: 2px;
+      background: linear-gradient(90deg, #003366, #0b63b8, #003366);
+      margin: 40px auto;
+      border-radius: 20px;
     }
 
     h2 {
@@ -144,36 +150,96 @@
       border: 0;
     }
 
-    /* ——— MOBIL ——— */
+    /* ——— SOCIAL BUTTON STYLE ——— */
+    .social-links {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .social-btn {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 22px;
+      background: linear-gradient(45deg, #0b63b8, #003e7d);
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+      transition: 0.3s;
+    }
+
+    .social-btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 28px rgba(0,0,0,0.28);
+    }
+
+    .social-btn img {
+      width: 26px;
+      height: 26px;
+    }
+
+    /* ——— FOOTER ——— */
+    footer {
+      margin-top: 60px;
+      background: #003366;
+      color: #fff;
+      padding: 35px 20px;
+      text-align: center;
+      border-radius: 16px 16px 0 0;
+    }
+
+    footer p {
+      color: #eee;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    footer .footer-social {
+      margin-top: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    footer .footer-social img {
+      width: 32px;
+      height: 32px;
+      transition: 0.3s;
+      filter: brightness(0) invert(1);
+    }
+
+    footer .footer-social img:hover {
+      transform: scale(1.15);
+    }
+
+    /* ——— MOBILE ——— */
     @media (max-width: 700px) {
       nav {
         height: 54px;
         gap: 20px;
       }
-      nav a {
-        font-size: 14px;
-        padding: 6px 10px;
-      }
+      nav a { font-size: 14px; padding: 6px 10px; }
 
-      .hero {
-        height: 85vh;
-      }
+      .hero { height: 85vh; }
 
       section {
         margin: 25px 12px;
         padding: 22px 18px;
       }
 
-      h2 {
-        font-size: 26px;
-      }
+      h2 { font-size: 26px; }
+      p { font-size: 16px; }
 
-      p {
+      iframe { height: 300px; }
+
+      .social-btn {
         font-size: 16px;
-      }
-
-      iframe {
-        height: 300px;
+        padding: 10px 16px;
       }
     }
   </style>
@@ -191,91 +257,81 @@
   <!-- HERO -->
   <header class="hero"></header>
 
-
-
   <!-- ---------------------- BIZ HAQIMIZDA ---------------------- -->
+  <div class="divider"></div>
   <section id="biz">
     <h2>Biz haqimizda</h2>
 
     <p>
-      <strong>Khiva Textile</strong> — 2022 yilda tashkil etilgan bo‘lib, to‘qimachilik mahsulotlari ishlab chiqarishda 
-      <strong>to‘liq ishlab chiqarish zanjiriga ega</strong> zamonaviy korxonadir.
+      <strong>Khiva Textile</strong> — 2022 yilda tashkil etilgan bo‘lib, 
+      zamonaviy to‘qimachilik korxonasi hisoblanadi.
     </p>
 
     <p>
-      Faoliyatimiz paxta ekilishidan boshlab, tayyor kiyim-kechakni eksportga yetkazib berishgacha bo‘lgan butun jarayonni o‘z ichiga oladi.
+      Faoliyat: paxtadan boshlab tayyor mahsulotgacha bo‘lgan to‘liq ishlab chiqarish zanjiri.
     </p>
 
     <p>
-      Ishlab chiqarish jarayonlari:
+      Jarayonlar:
       <br>• Paxtani qayta ishlash
-      <br>• Tola va ip ishlab chiqarish
+      <br>• Ip ishlab chiqarish
       <br>• Xom trikotaj mato tayyorlash
-      <br>• Matoni bo‘yash  
+      <br>• Mato bo‘yash  
       <br>• Tayyor kiyim-kechak tikish
-    </p>
-
-    <h2 style="margin-top:30px; color:#0b63b8;">Ishlab chiqarish quvvati</h2>
-
-    <p>
-      <strong>• Paxtani qayta ishlash:</strong> oyiga <strong style="color:#003366;">1200 tonna</strong><br>
-      <strong>• Ip ishlab chiqarish:</strong> oyiga <strong style="color:#003366;">550 tonna</strong><br>
-      <strong>• Trikotaj xom mato:</strong> oyiga <strong style="color:#003366;">250 tonna</strong><br>
-      <strong>• Tayyor kiyim-kechak:</strong> oyiga 
-      <strong style="color:#003366;">150 000 — 200 000 dona</strong>
-    </p>
-
-    <h2 style="margin-top:30px; color:#0b63b8;">Korxona haqida</h2>
-
-    <p>
-      Korxonamizda bugungi kunda <strong>400 dan ortiq ish o‘rni</strong> yaratilgan bo‘lib, mahalliy iqtisodiyotga katta hissa qo‘shmoqda.
-    </p>
-
-    <p>
-      Tayyor mahsulotlarimiz asosan <strong>Rossiya bozoriga eksport qilinadi</strong>.
     </p>
   </section>
 
-
-
   <!-- ---------------------- MAHSULOTLAR ---------------------- -->
+  <div class="divider"></div>
   <section id="mahsulot">
     <h2>Mahsulotlar</h2>
 
     <div class="product-grid">
 
       <div class="product-card" onclick="location.href='ip.html'">
-        <img src="ip-main.jpg" alt="Ip yigiruv">
+        <img src="ip-main.jpg">
         <h3>Ip yigiruv</h3>
       </div>
 
       <div class="product-card" onclick="location.href='trikotaj.html'">
-        <img src="trikotaj-main.jpg" alt="Trikotaj">
+        <img src="trikotaj-main.jpg">
         <h3>Trikotaj</h3>
       </div>
 
       <div class="product-card" onclick="location.href='baski.html'">
-        <img src="baski-main.jfif" alt="Baski">
+        <img src="baski-main.jfif">
         <h3>Baski</h3>
       </div>
 
       <div class="product-card" onclick="location.href='tikuv.html'">
-        <img src="tikuv-main.jpg" alt="Tikuvchilik">
+        <img src="tikuv-main.jpg">
         <h3>Tikuvchilik</h3>
       </div>
 
     </div>
   </section>
 
-
-
-  <!-- ---------------------- ALOQA + LOKATSIYA ---------------------- -->
+  <!-- ---------------------- ALOQA ---------------------- -->
+  <div class="divider"></div>
   <section id="aloqa">
     <h2>Aloqa</h2>
 
     <p><strong>Manzil:</strong> Xiva tumani, Shomoxulim mahallasi</p>
     <p><strong>Telefon:</strong> +998 91 993 15 15</p>
     <p><strong>Email:</strong> info@khivatex.com</p>
+
+    <!-- SOCIAL BUTTONS -->
+    <div class="social-links">
+      <a href="https://t.me/khiva_teks" class="social-btn" target="_blank">
+        <img src="telegram.png">
+        Telegram
+      </a>
+
+      <a href="https://www.instagram.com/khiva_teks?igsh=ZjRhd3ZkOWNjbTlt" class="social-btn" target="_blank">
+        <img src="instagram.png">
+        Instagram
+      </a>
+    </div>
 
     <!-- MAP BOX -->
     <div class="map-box">
@@ -287,6 +343,17 @@
     </div>
 
   </section>
+
+  <!-- ---------------------- FOOTER ---------------------- -->
+  <footer>
+    <p>© 2025 Khiva Textile. Barcha huquqlar himoyalangan.</p>
+    <p>Bizni ijtimoiy tarmoqlarda kuzating:</p>
+
+    <div class="footer-social">
+      <a href="https://t.me/khiva_teks"><img src="telegram.png"></a>
+      <a href="https://www.instagram.com/khiva_teks?igsh=ZjRhd3ZkOWNjbTlt"><img src="instagram.png"></a>
+    </div>
+  </footer>
 
 </body>
 </html>
